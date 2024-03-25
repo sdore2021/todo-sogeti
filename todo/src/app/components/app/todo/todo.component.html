@@ -1,0 +1,26 @@
+<div class="card text-center mb-4" style="width: 18rem;">
+    <div class="card-body" (click)="showDetail(todo)">
+      <h6  class="card-title" [ngClass]="{'finish': status === COMPLETED}">{{ todo.title }}</h6>
+      <p [ngClass]="{'step1': status === NEW_TASK, 'step2': status === IN_PRORESS, 'step3': status === COMPLETED}">Status : {{ status }}</p>
+    </div>
+    <div class="card-footer">
+        <form>
+            <div class="d-flex flex-row justify-content-center">
+                    <div class="btn-change-state">
+                        <label for="huey">New&nbsp;</label>
+                        <input type="radio" (change)="onChange($event)" [name]="status" [value]="NEW_TASK" [checked]="newTacheCheck()"/>
+                    </div>
+
+                    <div class="btn-change-state">
+                        <label for="huey">In progess&nbsp;</label>
+                        <input type="radio" (change)="onChange($event)" [name]="status" [value]="IN_PRORESS" [checked]="inProgessCheck()" />
+                    </div>
+                    
+                    <div class="btn-change-state">
+                        <label for="dewey">Completed&nbsp;</label>
+                        <input type="radio" (change)="onChange($event)" [name]="status" [value]="COMPLETED"  [checked]="completedCheck()"/>
+                    </div>
+            </div>
+       </form>
+    </div>
+</div>

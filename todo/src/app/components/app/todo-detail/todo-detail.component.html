@@ -1,0 +1,12 @@
+<div class="center-screen">
+<div class="card p-4" style="width: 24rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{ todo.title }}</h5>
+      <p class="card-text">{{ todo.description }}</p>
+      <div class="d-flex flex-row justify-content-around">
+        <button class="btn btn-link" (click)="goback()">Go back</button>
+        <button class="btn btn-danger" (click)="delete()">Delete</button>
+      </div>
+    </div>
+</div>
+</div>

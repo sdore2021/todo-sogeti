@@ -1,0 +1,20 @@
+.step1 {
+    background-color: red;
+}
+
+.step2 {
+    /* background-color: white; */
+    background-color: hsla(0, 0%, 90%, 0.662);
+}
+
+.step3 {
+    background-color: green;
+}
+
+.btn-change-state {
+    margin: 3px;
+}
+
+.finish {
+    text-decoration: line-through;
+}
