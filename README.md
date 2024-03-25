@@ -33,4 +33,12 @@ ng serve
 Une fois lancé, vous pouvez accéder au projet via l'URL : [http://localhost:4200/](http://localhost:4200/)
 
 
+---
 
+**Informations optionnelles :**
+- Les données sont stockés sur la base H2 pre-replire
+- Pour accéder à la base de données H2 intégrée utilisée par le projet backend, vous pouvez vous connecter via l'URL suivante : [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
+- Les paramètres de connexion de la base de données H2 sont :
+- JDBC URL : jdbc:h2:mem:tododb
+- Nom d'utilisateur : todo
+- Mot de passe : todo
