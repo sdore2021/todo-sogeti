@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS TODO (
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    title VARCHAR(255) not null,
+    description TEXT,
+    state VARCHAR(50)
+);

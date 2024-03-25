@@ -1,0 +1,12 @@
+INSERT INTO todo (title, description, state) VALUES ('Complete project proposal', 'Draft project proposal for upcoming client meeting', 'In Progress');
+INSERT INTO todo (title, description, state) VALUES ('Call John', 'Discuss upcoming project requirements', 'New Task');
+INSERT INTO todo (title, description, state) VALUES ('Buy groceries', 'Milk, eggs, bread, fruits', 'Completed');
+INSERT INTO todo (title, description, state) VALUES ('Review meeting notes', 'Review notes from yesterday''s team meeting', 'In Progress');
+INSERT INTO todo (title, description, state) VALUES ('Prepare presentation slides', 'Create slides for upcoming client presentation', 'In Progress');
+INSERT INTO todo (title, description, state) VALUES ('Pay electricity bill', 'Check bill statement and make payment', 'Completed');
+INSERT INTO todo (title, description, state) VALUES ('Schedule dentist appointment', 'Call dentist office and book appointment', 'New Task');
+INSERT INTO todo (title, description, state) VALUES ('Send report to manager', 'Compile and send weekly progress report to manager', 'In Progress');
+INSERT INTO todo (title, description, state) VALUES ('Fix bug in application code', 'Investigate and resolve bug reported by QA team', 'In Progress');
+INSERT INTO todo (title, description, state) VALUES ('Plan weekend getaway', 'Research and book accommodation for weekend trip', 'New Task');
+INSERT INTO todo (title, description, state) VALUES ('Write blog post', 'Draft blog post on recent industry trends', 'Completed');
+INSERT INTO todo (title, description, state) VALUES ('Attend team training session', 'Participate in training session on new project management tool', 'Completed');
