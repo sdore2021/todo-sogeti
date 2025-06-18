@@ -14,6 +14,11 @@ export class TodoService {
 
     constructor(private http: HttpClient){}
 
+    getHostname(): Observable<string> {
+        return this.http.get(this.url + "/pod", { responseType: 'text' });
+        }
+
+
     getTodos(): Observable<Todo[]>{
         return this.http.get<Todo[]>(this.url);
     }

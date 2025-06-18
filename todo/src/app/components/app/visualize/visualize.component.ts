@@ -33,6 +33,8 @@ export class VisualizeComponent implements OnInit {
   todos: Todo[] = [];
   todosCompleted: Todo[] = [];
 
+  hostname: string = "";
+
   addTodoForm!: FormGroup;
 
 
@@ -67,7 +69,16 @@ export class VisualizeComponent implements OnInit {
         this.todosCompleted = data.filter(todo => todo.state == STATUS.COMPLETED);
       }
       );
+
+      this.todoService.getHostname().subscribe(
+       (data: string) => {
+        this.hostname = data;
+        console.log("data ",data);
+        console.log("hostname :", this.hostname);
+        }
+      );
   }
+
 
   // modal code
   //function to open modal

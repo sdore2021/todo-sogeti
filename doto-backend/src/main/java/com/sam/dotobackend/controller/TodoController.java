@@ -24,6 +24,14 @@ public class TodoController {
     @Autowired
     TodoService todoService;
 
+
+    @CrossOrigin("*")
+    @GetMapping("pod")
+    public String hello(){
+        return System.getenv("HOSTNAME");
+    }
+
+
     @CrossOrigin("*")
     @GetMapping
     public List<Todo> getTodos(){
