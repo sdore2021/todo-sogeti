@@ -43,6 +43,12 @@ kubectl delete ingress todo-ingress
 # tout supprimer
 kubectl delete all --all --all-namespaces
 
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.9.6/deploy/static/provider/cloud/deploy.yaml
+
+
+europe-west1-docker.pkg.dev/formation-cloud-461205/todo-repo/backend:latest
+
+
 
 
 sur le cloud de google
@@ -55,6 +61,25 @@ kubectl config current-context
 
 # creation d'un depot docker dans artifact google cloud
  gcloud artifacts repositories create todo-repo --repository-format=docker --location=europe-west1
+
+
+kubectl create secret tls ingress-nginx-admission --cert=/dev/null --key=/dev/null -n ingress-nginx
+
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout tls.key  -out tls.crt -subj "CN=ingress-nginx-admission"
+
+
+
+
+kubectl delete deployment backend-deployment
+kubectl delete service backend-service
+
+
+# check lis ingress
+kubectl get pods -n ingress-nginx # verifier que ingress controller est 1/1 running
+kubectl get ingress  # verifier le host et port
+
+
+
  
 
 
